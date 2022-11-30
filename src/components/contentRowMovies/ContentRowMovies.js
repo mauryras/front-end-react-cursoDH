@@ -36,6 +36,7 @@ class ContentRowMovies extends Component {
   }
 
   render(){
+   
   return (
     <div className="row">
           

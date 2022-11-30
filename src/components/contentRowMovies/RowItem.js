@@ -29,8 +29,6 @@ function RowItem(props) {
 RowItem.propTypes = {
   title: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
-  quantity: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-    .isRequired,
   icon: PropTypes.string.isRequired,
 };
 

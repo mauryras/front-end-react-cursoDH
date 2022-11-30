@@ -7,7 +7,6 @@ class GenresInDb extends Component {
     super(props);
     this.state = {
       categorias:[],
-      cantCategorias:[],
     };
   }
 
@@ -15,14 +14,24 @@ class GenresInDb extends Component {
     fetch("http://localhost:3003/api/products")
       .then((response) => response.json())
       .then((productos) => {
+        
+        let categorias = productos.categorias
+        const cantCategorias = productos.cantCategorias
+        categorias = categorias.map((categoria)=>{
+          return{
+            ...categoria,
+            cant:cantCategorias[categoria.nombre],
+          }
+        })
         this.setState({
-          categorias:productos.categorias,
-          cantCategorias:productos.cantCategorias,
+          categorias:categorias,
         });
       });
      
   }
-  
+  repetir(){
+
+  }
 
   setColor() {
     const cardGenres = document.querySelector(".fondoCaja");
@@ -32,11 +41,10 @@ class GenresInDb extends Component {
     const cardGenres = document.querySelector(".fondoCaja");
     cardGenres.classList.remove("bg-secondary");
   }
-  //{this.state.categorias.map((categoria, index) => (
-   // <GenreCard key={index + categoria} genero={categoria.nombre}/>
-  //))}
+ 
 ////////////////////////VER DE CAMBIAR PARA PODER REUTILIZAR COMPONENTE///////////////
   render() {
+  console.log(this.state.categorias)
     return (
       <div className="col-lg-6 mb-4">
         <div className="card shadow mb-4">
@@ -51,12 +59,10 @@ class GenresInDb extends Component {
           </div>
           <div className="card-body fondoCaja">
             <div className="row">
-        
-            <GenreCard key={this.state.categorias[0]?.nombre} genero={this.state.categorias[0]?.nombre} cant={this.state.cantCategorias?.velas}/>
-            <GenreCard key={this.state.categorias[1]?.nombre} genero={this.state.categorias[1]?.nombre} cant={this.state.cantCategorias?.velones}/>
-            <GenreCard key={this.state.categorias[2]?.nombre} genero={this.state.categorias[2]?.nombre} cant={this.state.cantCategorias?.accesorios}/>
-            <GenreCard key={this.state.categorias[3]?.nombre} genero={this.state.categorias[3]?.nombre} cant={this.state.cantCategorias?.otra}/>
-
+              
+              {this.state.categorias.map((categoria, index) => (
+              <GenreCard key={index + categoria} genero={categoria.nombre} cant={categoria.cant}/>
+                                                          ))}
             </div>
           </div>
         </div>
