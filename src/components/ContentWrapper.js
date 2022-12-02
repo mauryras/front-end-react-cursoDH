@@ -1,7 +1,7 @@
 import ContentRowTop from "./ContentRowTop";
 
 import Footer from "./Footer";
-import TableMuvies from "./tableMovies/TableMovies";
+import TableProducts from "./TableProducts/TableProducts";
 import TopBar from "./TopBar";
 
 function ContentWrapper() {
@@ -11,7 +11,7 @@ function ContentWrapper() {
       <div id="content">
         <TopBar />
         <ContentRowTop />
-        <TableMuvies />
+        <TableProducts/>
       </div>
       {/* <!-- End of MainContent --> */}
 

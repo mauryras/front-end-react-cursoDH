@@ -35,7 +35,7 @@ function Sidebar() {
 
       {/* <!-- Nav Item - Pages --> */}
       <li className="nav-item">
-        <Link className="nav-link collapsed" to={"/peliculas"}>
+        <Link className="nav-link collapsed" to={"/products"}>
           <i className="fas fa-fw fa-folder"></i>
           <span>Productos/Usuarios</span>
         </Link>
@@ -43,7 +43,7 @@ function Sidebar() {
 
       {/* <!-- Nav Item - Charts --> */}
       <li className="nav-item">
-        <Link className="nav-link" to={"/ultima"}>
+        <Link className="nav-link" to={"/ultimo"}>
           <i className="fas fa-fw fa-chart-area"></i>
           <span>Último Producto</span>
         </Link>

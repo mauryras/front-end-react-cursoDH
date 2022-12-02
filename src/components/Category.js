@@ -1,7 +1,7 @@
 import { Component } from "react";
-import GenreCard from "./GenreCard";
+import CategoriasCard from "./CategoriasCard";
 
-class GenresInDb extends Component {
+class Category extends Component {
 
   constructor(props) {
     super(props);
@@ -61,7 +61,7 @@ class GenresInDb extends Component {
             <div className="row">
               
               {this.state.categorias.map((categoria, index) => (
-              <GenreCard key={index + categoria} genero={categoria.nombre} cant={categoria.cant}/>
+              <CategoriasCard key={index + categoria} genero={categoria.nombre} cant={categoria.cant}/>
                                                           ))}
             </div>
           </div>
@@ -71,4 +71,4 @@ class GenresInDb extends Component {
   }
 }
 
-export default GenresInDb;
+export default Category;

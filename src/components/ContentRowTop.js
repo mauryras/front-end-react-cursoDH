@@ -1,7 +1,7 @@
 
-import ContentRowMovies from "./contentRowMovies/ContentRowMovies";
-import GenresInDb from "./GenresInDb";
-import LastMovieInDb from "./LastMovieInDb";
+import ContentRowProducts from "./ContentRowProducts/ContentRowProducts";
+import Category from "./Category";
+import LastProduct from "./LastProduct";
 
 function ContentRowTop() {
     return (
@@ -10,11 +10,11 @@ function ContentRowTop() {
           <h1 className="h3 mb-0 text-gray-800">Dashboard Ceramique & Project</h1>
         </div>
   
-        <ContentRowMovies />
+        <ContentRowProducts/>
   
         <div className="row">
-          <LastMovieInDb />
-          <GenresInDb />
+          <LastProduct />
+          <Category />
         </div>
       </div>
     );

@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-class TableMuvies extends Component {
+class TableProducts extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -57,4 +57,4 @@ class TableMuvies extends Component {
   }
 }
 
-export default TableMuvies;
+export default TableProducts;

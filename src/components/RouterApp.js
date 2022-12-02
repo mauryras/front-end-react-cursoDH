@@ -1,9 +1,9 @@
 import Sidebar from "./SideBar";
 import ContentWrapper from "./ContentWrapper";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LastMovieInDb from "./LastMovieInDb";
-import GenresInDb from "./GenresInDb";
-import ContentRowMovies from "./contentRowMovies/ContentRowMovies";
+import LastProduct from "./LastProduct";
+import Category from "./Category";
+import ContentRowProducts from "./ContentRowProducts/ContentRowProducts";
 
 function RouterApp() {
   return (
@@ -12,9 +12,9 @@ function RouterApp() {
         <Sidebar/>
         <Routes>
           <Route path={"/"} element={<ContentWrapper />} />
-          <Route path={"/ultima"} element={<LastMovieInDb />} />
-          <Route path={"/generos"} element={<GenresInDb />} />
-          <Route path={"/peliculas"} element={<ContentRowMovies />} />
+          <Route path={"/ultimo"} element={<LastProduct />} />
+          <Route path={"/category"} element={<Category />} />
+          <Route path={"/products"} element={<ContentRowProducts />} />
           <Route path={"*"} element={<ContentWrapper />} />
         </Routes>
       </div>

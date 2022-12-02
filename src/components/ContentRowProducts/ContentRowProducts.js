@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import RowItem from "./RowItem";
 
-class ContentRowMovies extends Component {
+class ContentRowProducts extends Component {
 
   constructor(props) {
     super(props);
@@ -66,4 +66,4 @@ class ContentRowMovies extends Component {
   };
 }
 
-export default ContentRowMovies;
+export default ContentRowProducts;

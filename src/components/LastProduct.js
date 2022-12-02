@@ -1,7 +1,7 @@
 import { Component } from "react";
 
 
-class LastMovieInDb extends Component {
+class LastProduct extends Component {
 
   constructor(props) {
     super(props);
@@ -49,9 +49,7 @@ class LastMovieInDb extends Component {
             <p>
             {this.state.ultimo.description}
             </p>
-            <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">
-              Ver detalles
-            </a>
+          
           </div>
         </div>
       </div>
@@ -59,4 +57,4 @@ class LastMovieInDb extends Component {
   }
 }
 
-export default LastMovieInDb;
+export default LastProduct;
